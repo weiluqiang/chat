@@ -27,7 +27,8 @@ public class RegisterToZK implements Runnable {
     public void run() {
         try {
             //把这个三个参数， 注册到ZK上
-            String ip = InetAddress.getLocalHost().getHostAddress(); //得到IP地址
+            //String ip = InetAddress.getLocalHost().getHostAddress(); //得到IP地址
+            String ip = "localhost";
             Integer httpPort = conf.getHttpPort();
             Integer nettyPort = conf.getNettyPort();
             LOGGER.info("--服务端准备注册到Zookeeper中， IP :" + ip + "; HttpPort:" + httpPort + "; nettyPort:" + nettyPort);

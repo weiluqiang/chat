@@ -35,6 +35,7 @@ public class ChatServerController {
     public void pushMessage(@RequestBody ChatInfo chat) {
         //ChannelMap得到所有的与该服务端连接的客户端Channel
         if (MessageConstant.CHAT.equals(chat.getCommand())) {
+            logger.info("---服务端收到了消息: " + chat.getContent() +"，消息来自userId:" + chat.getUserId());
             //消息封装为protobuf对象
             MessageProto.MessageProtocol message = MessageProto.MessageProtocol.newBuilder()
                     .setCommand(chat.getCommand())

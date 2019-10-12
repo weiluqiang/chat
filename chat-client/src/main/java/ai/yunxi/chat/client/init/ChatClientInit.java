@@ -87,7 +87,6 @@ public class ChatClientInit {
                 channel = cf.channel();
             }
         } catch (InterruptedException e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         }
     }
